@@ -24,58 +24,145 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
       font-size: 17px;
     }
 
-    #search_zip, #restaurant_list {
+    #search_zip,
+    #restaurant_list {
       float: left;
       width: 45%;
       height: auto;
-      padding: 20px 10px;
+      padding: 5px;
     }
   </style>
 </head>
 
 <body>
   <!-- Menu bar -->
-  <div id="menu_bar" style="width:100%; max-width:100%; height:auto;">
+  <div id="menu_bar" style="float:center; width:100%; max-width:100%; height:auto;">
     <div class="logo">
-      <img src="./assets/Logo Letters.png" alt="Logo" style="width:auto; height:100%; max-height:100px;">
+      <img src="./assets/Logo Letters.png" alt="Logo" style="width:auto; height:100%; max-height:50px;">
     </div>
     <div class="menu">
       <a href="#" onclick="AccountPage();">Account</a>
       <a href="#" onclick="OrdersPage();">Orders</a>
       <input type="text" placeholder="Search">
-      <button type="submit" onclick="SearchZip();"><img src="./assets/Search Button.png" alt="Search" style="width:auto; height:100%; max-height:100px;"></button>
+      <button type="submit" onclick="SearchZip();"><img src="./assets/Search Button.png" alt="Search"
+          style="width:auto; height:100%; max-height:30px;"></button>
     </div>
   </div>
+  <br><br><br><br><br>
 
   <!-- Search by zip code -->
   <div id="search_zip">
     <form>
-      <label for "ZIP">Zip Code:</label>
+      <label for="ZIP">Zip Code:</label>
       <input type="number" id="ZIP" name="ZIP" max="99999" min="10000">
       <input type="submit" value="Search" onclick="SearchZip();">
     </form>
   </div>
+  <br><br>
 
   <!-- Search by cuisine -->
+  <div id="search_cuisine">
 
+  </div>
 
   <!-- Restaurant list -->
   <div id="restaurant_list"> <!--style="display:none;"-->
     <h3>Top rated in your area</h3>
-    <div id="restaurant1" class="restaurant">
-      
+    <div id="american" class="cuisine">
+      <div id="american1" class="restaurant">
+
+      </div>
+      <div id="american2" class="restaurant">
+
+      </div>
+      <div id="american3" class="restaurant">
+
+      </div>
+      <div id="american4" class="restaurant">
+
+      </div>
+      <div id="american5" class="restaurant">
+
+      </div>
+      <div id="american6" class="restaurant">
+
+      </div>
     </div>
-    <div id="restaurant2" class="restaurant"></div>
-    <div id="restaurant3" class="restaurant"></div>
-    <div id="restaurant4" class="restaurant"></div>
-    <div id="restaurant5" class="restaurant"></div>
-    <div id="restaurant6" class="restaurant"></div>
+    <div id="italian" class="cuisine">
+      <div id="italian1" class="restaurant">
+
+      </div>
+      <div id="italian2" class="restaurant">
+
+      </div>
+      <div id="italian3" class="restaurant">
+
+      </div>
+      <div id="italian4" class="restaurant">
+
+      </div>
+      <div id="italian5" class="restaurant">
+
+      </div>
+      <div id="italian6" class="restaurant">
+
+      </div>
+      <div id="japanese" class="cuisine">
+        <div id="japanese1" class="restaurant">
+  
+        </div>
+        <div id="japanese2" class="restaurant">
+  
+        </div>
+        <div id="japanese3" class="restaurant">
+  
+        </div>
+        <div id="japanese4" class="restaurant">
+  
+        </div>
+        <div id="japanese5" class="restaurant">
+  
+        </div>
+        <div id="japanese6" class="restaurant">
+  
+        </div>
+    </div>
   </div>
 
   <!-- Restaurant menu -->
+  <div id="menu">
+    <h3></h3>
+    
+  </div>
 
   <!-- Restaurant map -->
+  <div id="map">
+
+  </div>
+
+  <!--Cart-->
+  <div id="cart">
+
+  </div>
+
+  <!--Payment-->
+  <div id="payment">
+
+  </div>
+
+  <!--Account page-->
+  <div id="account" style="display:none;">
+    <h2>Account</h2>
+
+  </div>
+
+  <!--Orders page-->
+  <div id="orders" style="display:none;">
+    <h2>Orders</h2>
+
+  </div>
 
   <script src="Crave_Hub_script.js"></script>
 </body>
+
 </html>
