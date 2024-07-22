@@ -7,6 +7,11 @@ function AccountPage() {
   document.getElementById("restaurant_list").style.display = "none";
 }
 
+function Liberty() {
+  event.preventDefault();
+  document.getElementById("liberty_menu").style.display = "block";
+} 
+
 function OrdersPage() {
   event.preventDefault();
   document.getElementById("orders").style.display = "block";
