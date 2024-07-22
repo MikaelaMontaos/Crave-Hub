@@ -31,6 +31,10 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
       height: auto;
       padding: 5px;
     }
+
+    .rating {
+      display: inline-block;
+    }
   </style>
 </head>
 
@@ -68,9 +72,19 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
   <!-- Restaurant list -->
   <div id="restaurant_list"> <!--style="display:none;"-->
     <h3>Top rated in your area</h3>
-    <div id="american" class="cuisine">
+    <div id="american" class="cuisine"> 
       <div id="american1" class="restaurant">
-
+        <a href="#" onclick="Liberty();">
+          <img src="./assets/The Liberty Grill.jpg" alt="The Liberty Grill">
+          <h4>The Liberty Grill</h4>
+        </a>
+        <img src="./assets/Star Filled.png" alt="Star" class="rating" style="width:auto; height:100%; max-height:20px;">
+        <img src="./assets/Star Filled.png" alt="Star" class="rating" style="width:auto; height:100%; max-height:20px;">
+        <img src="./assets/Star Filled.png" alt="Star" class="rating" style="width:auto; height:100%; max-height:20px;">
+        <img src="./assets/Star Filled.png" alt="Star" class="rating" style="width:auto; height:100%; max-height:20px;">
+        <img src="./assets/Star Outline.png" alt="StarEmpty" class="rating" style="width:auto; height:100%; max-height:20px;">
+        <p class="rating">4</p>
+        <p>11:00 AM - 11:00 PM</p>
       </div>
       <div id="american2" class="restaurant">
 
@@ -130,34 +144,34 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
   </div>
 
   <!-- Restaurant menu -->
-  <div id="menu">
-    <h3></h3>
-    
+  <div id="liberty_menu" style="display:none;"> <!--style="display:none;"-->
+    <h3>The Liberty Grill</h3>
+    <p>Menu......................</p>    
   </div>
 
   <!-- Restaurant map -->
-  <div id="map">
+  <div id="map" > <!--style="display:none;"-->
 
   </div>
 
   <!--Cart-->
-  <div id="cart">
+  <div id="cart" > <!--style="display:none;"-->
 
   </div>
 
   <!--Payment-->
-  <div id="payment">
+  <div id="payment" > <!--style="display:none;"-->
 
   </div>
 
   <!--Account page-->
-  <div id="account" style="display:none;">
+  <div id="account" > <!--style="display:none;"-->
     <h2>Account</h2>
 
   </div>
 
   <!--Orders page-->
-  <div id="orders" style="display:none;">
+  <div id="orders" > <!--style="display:none;"-->
     <h2>Orders</h2>
 
   </div>
