@@ -29,11 +29,31 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
       float: left;
       width: 45%;
       height: auto;
-      padding: 5px;
+      padding: 0.25% 2%;
+      border: 1px;
+      border-style: solid;
+    }
+
+    #search_cuisine {
+      float: right;
+      width: 45%;
+      height: auto;
+      padding: 0.25% 2%;
+      border: 1px;
+      border-style: solid;
     }
 
     .rating {
       display: inline-block;
+    }
+
+    .restaurant_menu {
+      float: right;
+      width: 45%;
+      height: auto;
+      padding: 0.25% 2%;
+      border: 1px;
+      border-style: solid;
     }
   </style>
 </head>
@@ -57,50 +77,54 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
   <!-- Search by zip code -->
   <div id="search_zip">
     <form>
-      <label for="ZIP">Zip Code:</label>
+      <label for="ZIP">
+        <h2 style="display:inline-block;">Zip Code:</h2>
+      </label>
       <input type="number" id="ZIP" name="ZIP" max="99999" min="10000">
       <input type="submit" value="Search" onclick="SearchZip();">
     </form>
   </div>
-  <br><br>
 
   <!-- Search by cuisine -->
-  <div id="search_cuisine">
-    <div>
-      <img src="./assets/Amarican.jpg" alt="AmericanSBCImage" width="250" height="200">
-      <div>
-        <p>American</p>
-       </div>
-    </div>
-    <div>
-      <img scr="./assets/Italian.png" alt="ItalianSBCImage" width="250" height="200">
-      <div>
-        <p>Italian</p>
-      </div>
-    </div>
-    <div>
-      <img scr="./assets/Japanese.jpg" alt="JapaneseSBCImage" width="250" height="200">
-      <div>
-        <p>Japanese</p>
-      </div>
-    </div>
+  <div id="search_cuisine" style="display:none;">
+    <h2>Search by cuisine</h2>
+    <a href="#" onclick="SearchAmerican();" style="display: inline-block;">
+      <img src="./assets/Amarican.jpg" alt="AmericanSBCImage" width="250px" height="auto">
+      <p style="text-align:center;">American</p>
+    </a>
+    <a href="#" onclick="SearchItalian();" style="display: inline-block;">
+      <img scr="./assets/Italian.jpg" alt="ItalianSBCImage" width="250px" height="auto">
+      <p style="text-align:center;">Italian</p>
+    </a>
+    <a href="#" onclick="SearchJapanese();" style="display: inline-block;">
+      <img scr="./assets/Japanese.jpg" alt="JapaneseSBCImage" width="250px" height="auto">
+      <p style="text-align:center;">Japanese</p>
+    </a>
+  </div>
+  <br><br>
+
+  <!-- Restaurant map -->
+  <div id="map"> <!--style="display:none;"-->
+
   </div>
 
-  <!-- Restaurant list .................--> 
-  <div id="restaurant_list" style="display:none;"> <!--style="display:none;"-->
-    <h3>Top rated in your area</h3>
-    <div id="american" class="cuisine"> 
+  <!-- Restaurant list -->
+  <div id="restaurant_list" style="display:none;">
+    <h2>Top rated in your area</h2>
+    <div id="american" class="cuisine" style="display:none;">
       <div id="american1" class="restaurant">
         <a href="#" onclick="Liberty();">
           <img src="./assets/The Liberty Grill.jpg" alt="The Liberty Grill">
-          <h4>The Liberty Grill</h4>
+          <h3>The Liberty Grill</h3>
         </a>
         <img src="./assets/Star Filled.png" alt="Star" class="rating" style="width:auto; height:100%; max-height:20px;">
         <img src="./assets/Star Filled.png" alt="Star" class="rating" style="width:auto; height:100%; max-height:20px;">
         <img src="./assets/Star Filled.png" alt="Star" class="rating" style="width:auto; height:100%; max-height:20px;">
         <img src="./assets/Star Filled.png" alt="Star" class="rating" style="width:auto; height:100%; max-height:20px;">
-        <img src="./assets/Star Outline.png" alt="StarEmpty" class="rating" style="width:auto; height:100%; max-height:20px;">
+        <img src="./assets/Star Outline.png" alt="StarEmpty" class="rating"
+          style="width:auto; height:100%; max-height:20px;">
         <p class="rating">4</p>
+        <p>American</p>
         <p>11:00 AM - 11:00 PM</p>
       </div>
       <div id="american2" class="restaurant">
@@ -119,9 +143,21 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
 
       </div>
     </div>
-    <div id="italian" class="cuisine">
+    <div id="italian" class="cuisine" style="display:none;">
       <div id="italian1" class="restaurant">
-
+        <a href="#" onclick="Liberty();">
+          <img src="./assets/The Liberty Grill.jpg" alt="The Liberty Grill">
+          <h3>Sample title</h3>
+        </a>
+        <img src="./assets/Star Filled.png" alt="Star" class="rating" style="width:auto; height:100%; max-height:20px;">
+        <img src="./assets/Star Filled.png" alt="Star" class="rating" style="width:auto; height:100%; max-height:20px;">
+        <img src="./assets/Star Filled.png" alt="Star" class="rating" style="width:auto; height:100%; max-height:20px;">
+        <img src="./assets/Star Filled.png" alt="Star" class="rating" style="width:auto; height:100%; max-height:20px;">
+        <img src="./assets/Star Outline.png" alt="StarEmpty" class="rating"
+          style="width:auto; height:100%; max-height:20px;">
+        <p class="rating">4</p>
+        <p>Italian</p>
+        <p>11:00 AM - 11:00 PM</p>
       </div>
       <div id="italian2" class="restaurant">
 
@@ -138,62 +174,73 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
       <div id="italian6" class="restaurant">
 
       </div>
-      <div id="japanese" class="cuisine">
+      <div id="japanese" class="cuisine" style="display:none;">
         <div id="japanese1" class="restaurant">
-  
+          <a href="#" onclick="Liberty();">
+            <img src="./assets/The Liberty Grill.jpg" alt="The Liberty Grill">
+            <h3>Sample title</h3>
+          </a>
+          <img src="./assets/Star Filled.png" alt="Star" class="rating"
+            style="width:auto; height:100%; max-height:20px;">
+          <img src="./assets/Star Filled.png" alt="Star" class="rating"
+            style="width:auto; height:100%; max-height:20px;">
+          <img src="./assets/Star Filled.png" alt="Star" class="rating"
+            style="width:auto; height:100%; max-height:20px;">
+          <img src="./assets/Star Filled.png" alt="Star" class="rating"
+            style="width:auto; height:100%; max-height:20px;">
+          <img src="./assets/Star Outline.png" alt="StarEmpty" class="rating"
+            style="width:auto; height:100%; max-height:20px;">
+          <p class="rating">4</p>
+          <p>American</p>
+          <p>11:00 AM - 11:00 PM</p>
         </div>
         <div id="japanese2" class="restaurant">
-  
+
         </div>
         <div id="japanese3" class="restaurant">
-  
+
         </div>
         <div id="japanese4" class="restaurant">
-  
+
         </div>
         <div id="japanese5" class="restaurant">
-  
+
         </div>
         <div id="japanese6" class="restaurant">
-  
+
         </div>
+      </div>
     </div>
-  </div>
 
-  <!-- Restaurant menu -->
-  <div id="liberty_menu" style="display:none;"> <!--style="display:none;"-->
-    <h3>The Liberty Grill</h3>
-    <p>Menu......................</p>    
-  </div>
+    <!-- Restaurant menu -->
+    <div id="liberty_menu" class="restaurant_menu" style="display:none;">
+      <h3>The Liberty Grill</h3>
+      <p>Menu......................</p>
+    </div>
 
-  <!-- Restaurant map -->
-  <div id="map" > <!--style="display:none;"-->
+    <!--Cart-->
+    <div id="cart"> <!--style="display:none;"-->
 
-  </div>
+    </div>
 
-  <!--Cart-->
-  <div id="cart" > <!--style="display:none;"-->
+    <!--Payment-->
+    <div id="payment"> <!--style="display:none;"-->
 
-  </div>
+    </div>
 
-  <!--Payment-->
-  <div id="payment" > <!--style="display:none;"-->
+    <!--Account page-->
+    <div id="account"> <!--style="display:none;"-->
+      <h2>Account</h2>
 
-  </div>
+    </div>
 
-  <!--Account page-->
-  <div id="account" > <!--style="display:none;"-->
-    <h2>Account</h2>
+    <!--Orders page-->
+    <div id="orders"> <!--style="display:none;"-->
+      <h2>Orders</h2>
 
-  </div>
+    </div>
 
-  <!--Orders page-->
-  <div id="orders" > <!--style="display:none;"-->
-    <h2>Orders</h2>
-
-  </div>
-
-  <script src="Crave_Hub_script.js"></script>
+    <script src="Crave_Hub_script.js"></script>
 </body>
 
 </html>
