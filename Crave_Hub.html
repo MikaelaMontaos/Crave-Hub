@@ -47,7 +47,7 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
     <div class="menu">
       <a href="#" onclick="AccountPage();">Account</a>
       <a href="#" onclick="OrdersPage();">Orders</a>
-      <input type="text" placeholder="Search">
+      <input type="number" id="search_zip_menu" name="search_zip_menu" max="99999" min="10000">
       <button type="submit" onclick="SearchZip();"><img src="./assets/Search Button.png" alt="Search"
           style="width:auto; height:100%; max-height:30px;"></button>
     </div>
@@ -70,7 +70,7 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
   </div>
 
   <!-- Restaurant list -->
-  <div id="restaurant_list"> <!--style="display:none;"-->
+  <div id="restaurant_list" style="display:none;"> <!--style="display:none;"-->
     <h3>Top rated in your area</h3>
     <div id="american" class="cuisine"> 
       <div id="american1" class="restaurant">
