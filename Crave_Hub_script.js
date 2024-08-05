@@ -58,3 +58,21 @@ function Liberty() {
   // Hide other divs
   document.getElementById("search_cuisine").style.display = "none";
 }
+
+let cartCt = 0;
+
+function LibertyAddToCart() {
+  let libertyWingsbtn = document.getElementById('libertyWings');
+  let libertyWingsCt = 0;
+  
+  libertyWingsbtn.addEventListener('click', () => {
+    libertyWingsCt++;
+    cartCt++;
+  });
+
+  document.getElementById("theLibertyGrillCart").style.display = "block";
+  document.getElementById("theLibertyGrillCart").style.display = "inline";
+  document.getElementById("cartCount").innerHTML = cartCt;
+  document.getElementById("cartCount").style.display = "block";
+  document.getElementById("cartCount").style.display = "inline";
+}

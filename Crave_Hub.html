@@ -47,6 +47,11 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
       display: inline-block;
     }
 
+    .menu_photo {
+      float: right;
+      padding: 1%;
+    }
+
     .restaurant_menu {
       float: right;
       width: 45%;
@@ -101,21 +106,43 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
       <p style="text-align:center;">Japanese</p>
     </a>
   </div>
-  <br><br>
-
+  
   <!-- Restaurant map -->
   <div id="map"> <!--style="display:none;"-->
 
   </div>
 
+  <!-- Restaurant menu -->
+  <div id="liberty_menu" class="restaurant_menu" style="display:none;">
+    <h3>The Liberty Grill</h3>
+    <form>
+      <h4>Starters</h4>
+      <p><strong>Liberty Wings</strong> ($9)
+      <img src="./assets/Liberty Wings.jpg" width="auto" height="100px" class="menu_photo"></p>
+      <p>Crispy chicken wings tossed in your choice of buffalo, BBQ, or garlic parmesan sauce. Served with celery and blue cheese dressing.</p>
+      <input type="button" id="libertyWings" value="Add to cart" onclick="LibertyAddToCart();">
+      <input type="button" id="theLibertyGrillCart" value="Go to cart" style="display: none;" onclick=""><span id="cartCount" style="display: none;"> 0 </span>
+
+      <h4>Main Courses</h4>
+
+      <h4>Sides</h4>
+
+      <h4>Desserts</h4>
+
+      <h4>Drinks</h4>
+
+    </form>
+  </div>
+  <br><br>
+
   <!-- Restaurant list -->
   <div id="restaurant_list" style="display:none;">
     <h2>Top rated in your area</h2>
     <div id="american" class="cuisine" style="display:none;">
-      <div id="american1" class="restaurant">
+      <div id="american1" class="restaurant" style="text-align:center;">
         <a href="#" onclick="Liberty();">
-          <img src="./assets/The Liberty Grill.jpg" alt="The Liberty Grill">
-          <h3>The Liberty Grill</h3>
+          <img src="./assets/The Liberty Grill.jpg" alt="The Liberty Grill" width="auto" height="300px"><br>
+          <h3 style="display: inline-block;">The Liberty Grill</h3>
         </a>
         <img src="./assets/Star Filled.png" alt="Star" class="rating" style="width:auto; height:100%; max-height:20px;">
         <img src="./assets/Star Filled.png" alt="Star" class="rating" style="width:auto; height:100%; max-height:20px;">
@@ -124,8 +151,8 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
         <img src="./assets/Star Outline.png" alt="StarEmpty" class="rating"
           style="width:auto; height:100%; max-height:20px;">
         <p class="rating">4</p>
-        <p>American</p>
-        <p>11:00 AM - 11:00 PM</p>
+        <p>American<br>
+          11:00 AM - 11:00 PM</p>
       </div>
       <div id="american2" class="restaurant">
 
@@ -145,19 +172,6 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
     </div>
     <div id="italian" class="cuisine" style="display:none;">
       <div id="italian1" class="restaurant">
-        <a href="#" onclick="Liberty();">
-          <img src="./assets/The Liberty Grill.jpg" alt="The Liberty Grill">
-          <h3>Sample title</h3>
-        </a>
-        <img src="./assets/Star Filled.png" alt="Star" class="rating" style="width:auto; height:100%; max-height:20px;">
-        <img src="./assets/Star Filled.png" alt="Star" class="rating" style="width:auto; height:100%; max-height:20px;">
-        <img src="./assets/Star Filled.png" alt="Star" class="rating" style="width:auto; height:100%; max-height:20px;">
-        <img src="./assets/Star Filled.png" alt="Star" class="rating" style="width:auto; height:100%; max-height:20px;">
-        <img src="./assets/Star Outline.png" alt="StarEmpty" class="rating"
-          style="width:auto; height:100%; max-height:20px;">
-        <p class="rating">4</p>
-        <p>Italian</p>
-        <p>11:00 AM - 11:00 PM</p>
       </div>
       <div id="italian2" class="restaurant">
 
@@ -176,23 +190,6 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
       </div>
       <div id="japanese" class="cuisine" style="display:none;">
         <div id="japanese1" class="restaurant">
-          <a href="#" onclick="Liberty();">
-            <img src="./assets/The Liberty Grill.jpg" alt="The Liberty Grill">
-            <h3>Sample title</h3>
-          </a>
-          <img src="./assets/Star Filled.png" alt="Star" class="rating"
-            style="width:auto; height:100%; max-height:20px;">
-          <img src="./assets/Star Filled.png" alt="Star" class="rating"
-            style="width:auto; height:100%; max-height:20px;">
-          <img src="./assets/Star Filled.png" alt="Star" class="rating"
-            style="width:auto; height:100%; max-height:20px;">
-          <img src="./assets/Star Filled.png" alt="Star" class="rating"
-            style="width:auto; height:100%; max-height:20px;">
-          <img src="./assets/Star Outline.png" alt="StarEmpty" class="rating"
-            style="width:auto; height:100%; max-height:20px;">
-          <p class="rating">4</p>
-          <p>American</p>
-          <p>11:00 AM - 11:00 PM</p>
         </div>
         <div id="japanese2" class="restaurant">
 
@@ -210,12 +207,6 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
 
         </div>
       </div>
-    </div>
-
-    <!-- Restaurant menu -->
-    <div id="liberty_menu" class="restaurant_menu" style="display:none;">
-      <h3>The Liberty Grill</h3>
-      <p>Menu......................</p>
     </div>
 
     <!--Cart-->
