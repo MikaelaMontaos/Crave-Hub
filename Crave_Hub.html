@@ -12,35 +12,54 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
   <style>
     .logo {
       float: left;
-      padding: 14px 16px;
       font-size: 17px;
+      padding: 1%;
     }
 
     .menu {
-      float: right;
       display: block;
-      text-align: center;
-      padding: 14px 16px;
+      float: right;
       font-size: 17px;
+      padding: 1%;
+      text-align: center;
+    }
+
+    #menu_bar {
+      background-color: #03c6dc;
+      height: auto;
+      overflow: auto;
+      width: auto;
+    }
+
+    #cart {
+      float: center;
+      height: auto;
+      padding: 0.25% 2%;
+      width: 50%;
     }
 
     #search_zip,
     #restaurant_list {
-      float: left;
-      width: 45%;
-      height: auto;
-      padding: 0.25% 2%;
       border: 1px;
       border-style: solid;
+      float: left;
+      height: auto;
+      padding: 0.25% 2%;
+      width: 45%;
     }
 
     #search_cuisine {
-      float: right;
-      width: 45%;
-      height: auto;
-      padding: 0.25% 2%;
       border: 1px;
       border-style: solid;
+      float: right;
+      height: auto;
+      padding: 0.25% 2%;
+      width: 45%;
+    }
+
+    .searchCuisineImg {
+      width: 200px;
+      height: auto;
     }
 
     .rating {
@@ -49,16 +68,22 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
 
     .menu_photo {
       float: right;
+      height: 100px;
       padding: 1%;
+      width: auto;
     }
 
     .restaurant_menu {
-      float: right;
-      width: 45%;
-      height: auto;
-      padding: 0.25% 2%;
       border: 1px;
       border-style: solid;
+      float: right;
+      height: auto;
+      padding: 0.25% 2%;
+      width: 45%;
+    }
+
+    .itemNameCart {
+      display: inline-block;
     }
   </style>
 </head>
@@ -70,14 +95,36 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
       <img src="./assets/Logo Letters.png" alt="Logo" style="width:auto; height:100%; max-height:50px;">
     </div>
     <div class="menu">
-      <a href="#" onclick="AccountPage();">Account</a>
-      <a href="#" onclick="OrdersPage();">Orders</a>
+      <!-- <a href="#" onclick="AccountPage();">Account</a>
+      <a href="#" onclick="OrdersPage();">Orders</a> -->
+      <a href="#" onclick="Cart();">Cart</a>
       <input type="number" id="search_zip_menu" name="search_zip_menu" max="99999" min="10000">
       <button type="submit" onclick="SearchZip();"><img src="./assets/Search Button.png" alt="Search"
           style="width:auto; height:100%; max-height:30px;"></button>
     </div>
   </div>
-  <br><br><br><br><br>
+
+  <!--Cart under construction--> 
+  <div id="cart" style="display:none;">
+    <h2>Cart</h2>
+    <h3 id="emptyCart">No items in cart</h3>
+    <table id="cartTable">
+      <tr>
+        <th>Item</th>
+        <th>Quantity</th>
+        <th>Price</th>
+      </tr>
+      <tr id="libertyWingsCart" style="display: none;">
+        <td>
+          <img class="menu_photo" src="./assets/Liberty Wings.jpg">
+          <p class="itemNameCart">Liberty Wings</p>
+        </td>
+        <td><span id="libertyWingsCartCount">0</span></td>
+        <td>$<span id="libertyWingsPrice">0</span></td>
+      </tr>
+    </table>
+    <input type="button" value="Checkout" onclick="Checkout();">
+  </div>
 
   <!-- Search by zip code -->
   <div id="search_zip">
@@ -94,34 +141,45 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
   <div id="search_cuisine" style="display:none;">
     <h2>Search by cuisine</h2>
     <a href="#" onclick="SearchAmerican();" style="display: inline-block;">
-      <img src="./assets/Amarican.jpg" alt="AmericanSBCImage" width="250px" height="auto">
+      <img class="searchCuisineImg" src="./assets/Amarican.jpg" alt="AmericanSBCImage">
       <p style="text-align:center;">American</p>
     </a>
-    <a href="#" onclick="SearchItalian();" style="display: inline-block;">
-      <img scr="./assets/Italian.jpg" alt="ItalianSBCImage" width="250px" height="auto">
+    <a href="#" onclick="SearchItalian();">
+      <img class="searchCuisineImg" scr="./assets/Italian.jpg" alt="ItalianSBCImage">
       <p style="text-align:center;">Italian</p>
     </a>
     <a href="#" onclick="SearchJapanese();" style="display: inline-block;">
-      <img scr="./assets/Japanese.jpg" alt="JapaneseSBCImage" width="250px" height="auto">
+      <img class="searchCuisineImg" scr="./assets/Japanese.jpg" alt="JapaneseSBCImage">
       <p style="text-align:center;">Japanese</p>
     </a>
   </div>
-  
+
   <!-- Restaurant map -->
   <div id="map"> <!--style="display:none;"-->
 
   </div>
 
-  <!-- Restaurant menu -->
+  <!-- Restaurant menu under construction-->
   <div id="liberty_menu" class="restaurant_menu" style="display:none;">
-    <h3>The Liberty Grill</h3>
+    <h2>The Liberty Grill</h2>
     <form>
-      <h4>Starters</h4>
+      <h3>Starters</h3>
+
       <p><strong>Liberty Wings</strong> ($9)
-      <img src="./assets/Liberty Wings.jpg" width="auto" height="100px" class="menu_photo"></p>
-      <p>Crispy chicken wings tossed in your choice of buffalo, BBQ, or garlic parmesan sauce. Served with celery and blue cheese dressing.</p>
-      <input type="button" id="libertyWings" value="Add to cart" onclick="LibertyAddToCart();">
-      <input type="button" id="theLibertyGrillCart" value="Go to cart" style="display: none;" onclick=""><span id="cartCount" style="display: none;"> 0 </span>
+        <img class="menu_photo" src="./assets/Liberty Wings.jpg">
+      </p>
+      <p>Crispy chicken wings tossed in your choice of buffalo, BBQ, or garlic parmesan sauce. Served with celery and
+        blue cheese dressing.</p>
+      <input type="button" id="libertyWings" value="Add to cart" onclick="LibertyWingsAdd();">
+      <input type="button" id="theLibertyGrillCart" value="Go to cart" style="display: none;" onclick="Cart();">
+
+      <!--template-->
+      <p><strong>Item name</strong> ($0)
+        <img class="menu_photo" src="">
+      </p>
+      <p>Description</p>
+      <input type="button" id="itemName" value="Add to cart" onclick="ItemNameAdd();">
+      <input type="button" id="theLibertyGrillCart" value="Go to cart" style="display: none;" onclick="Cart();">
 
       <h4>Main Courses</h4>
 
@@ -209,11 +267,6 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
       </div>
     </div>
 
-    <!--Cart-->
-    <div id="cart"> <!--style="display:none;"-->
-
-    </div>
-
     <!--Payment-->
     <div id="payment"> <!--style="display:none;"-->
 
@@ -221,13 +274,13 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
 
     <!--Account page-->
     <div id="account"> <!--style="display:none;"-->
-      <h2>Account</h2>
+      <h3>Account</h3>
 
     </div>
 
     <!--Orders page-->
     <div id="orders"> <!--style="display:none;"-->
-      <h2>Orders</h2>
+      <h3>Orders</h3>
 
     </div>
 

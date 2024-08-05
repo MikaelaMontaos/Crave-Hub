@@ -61,18 +61,42 @@ function Liberty() {
 
 let cartCt = 0;
 
-function LibertyAddToCart() {
-  let libertyWingsbtn = document.getElementById('libertyWings');
-  let libertyWingsCt = 0;
-  
-  libertyWingsbtn.addEventListener('click', () => {
-    libertyWingsCt++;
-    cartCt++;
-  });
+// The Liberty Grill Menu
+let libertyWingsCt = 0;
 
-  document.getElementById("theLibertyGrillCart").style.display = "block";
-  document.getElementById("theLibertyGrillCart").style.display = "inline";
-  document.getElementById("cartCount").innerHTML = cartCt;
-  document.getElementById("cartCount").style.display = "block";
-  document.getElementById("cartCount").style.display = "inline";
+function LibertyWingsAdd() {
+  document.getElementById('libertyWings').addEventListener('click', function(event) {
+    event.preventDefault();
+    
+    document.getElementById("theLibertyGrillCart").style.display = "block";
+    document.getElementById("theLibertyGrillCart").style.display = "inline";
+    
+    libertyWingsCt = libertyWingsCt + 1;
+    cartCt = cartCt + 1;
+
+    // Debug
+    console.log(libertyWingsCt);
+    console.log(cartCt);
+  });
+}
+
+function Cart() {
+  document.getElementById("cart").style.display = "block";
+
+  // The Liberty Grill
+  if(libertyWingsCt != 0) {
+    document.getElementById("libertyWingsCart").style.display = "block";
+    document.getElementById("libertyWingsCartCount").innerHTML = libertyWingsCt;
+    document.getElementById("libertyWingsPrice").innerHTML = libertyWingsCt * 9;
+  }
+
+  // Hide other divs
+  document.getElementById("search_zip").style.display = "none";
+  document.getElementById("search_cuisine").style.display = "none";
+  document.getElementById("liberty_menu").style.display = "none";
+  document.getElementById("restaurant_list").style.display = "none";
+}
+
+function Checkout() {
+
 }
