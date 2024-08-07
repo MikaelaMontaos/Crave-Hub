@@ -82,14 +82,18 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
       width: 45%;
     }
 
-    .itemNameCart {
-      display: inline-block;
+    table {
+      margin: 20%;
+      table-layout: fixed;
+      vertical-align: center;
+      width: 100%;
+
+      /* Debug */
+      border: 1; border-style:solid; border-color: black;
     }
 
-    th, td { 
-      width: 500px;
-      position: fixed;
-      
+    td {
+      align-items: center;
     }
   </style>
 </head>
@@ -106,30 +110,28 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
       <a href="#" onclick="OrdersPage();">Orders</a> -->
       <a href="#" onclick="Cart();">Cart</a>
       <input type="number" id="search_zip_menu" name="search_zip_menu" max="99999" min="10000">
-      <button type="submit" onclick="SearchZip();"><img src="./assets/Search Button.png" alt="Search" style="width:auto; height:100%; max-height:30px;"></button>
+      <button type="submit" onclick="SearchZip();"><img src="./assets/Search Button.png" alt="Search"
+          style="width:auto; height:100%; max-height:30px;"></button>
     </div>
   </div>
 
-  <!--Cart under construction--> 
+  <!--Cart under construction-->
   <div id="cart" style="display:none;">
     <h2>Cart</h2>
     <h3 id="emptyCart">No items in cart</h3>
-    <table id="cartTable" style="display:none; align:center;">
+    <table id="cartTable" style="display:none; border: 1; border-style:solid; border-color: black;">
       <tr>
         <th>Item</th>
         <th>Quantity</th>
         <th>Price</th>
       </tr>
       <tr id="libertyWingsCart" style="display:none;">
-        <td>
-          <img class="menu_photo" src="./assets/Liberty Wings.jpg">
-          <p class="itemNameCart" style="display:inline-block;">Liberty Wings</p>
-        </td>
+        <td><img class="menu_photo" src="./assets/Liberty Wings.jpg">Liberty Wings</td>
         <td><span id="libertyWingsCartCount">0</span></td>
-        <td>$<span id="libertyWingsPrice" >0</span></td>
+        <td>$<span id="libertyWingsPrice">0</span></td>
       </tr>
     </table>
-    <input type="button" value="Checkout" onclick="Checkout();">
+    <input type="button" value="Checkout" onclick="Checkout();" style="float:right;">
   </div>
 
   <!-- Search by zip code -->
@@ -146,18 +148,20 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
   <!-- Search by cuisine -->
   <div id="search_cuisine" style="display:none;">
     <h2>Search by cuisine</h2>
-    <a href="#" onclick="SearchAmerican();" style="display: inline-block;">
-      <img class="searchCuisineImg" src="./assets/Amarican.jpg" alt="AmericanSBCImage">
-      <p style="text-align:center;">American</p>
-    </a>
-    <a href="#" onclick="SearchItalian();" style="display: inline-block;">
-      <img class="searchCuisineImg" src="./assets/Italian.jpg" alt="ItalianSBCImage">
-      <p style="text-align:center;">Italian</p>
-    </a>
-    <a href="#" onclick="SearchJapanese();" style="display: inline-block;">
-      <img class="searchCuisineImg" src="./assets/Japanese.jpg" alt="JapaneseSBCImage">
-      <p style="text-align:center;">Japanese</p>
-    </a>
+    <div style="display: flex; justify-content: center; align-items: center;">
+      <a href="#" onclick="SearchAmerican();" style="display: inline-block;">
+        <img class="searchCuisineImg" src="./assets/Amarican.jpg" alt="AmericanSBCImage">
+        <p style="text-align:center;">American</p>
+      </a>
+      <a href="#" onclick="SearchItalian();" style="display: inline-block;">
+        <img class="searchCuisineImg" src="./assets/Italian.jpg" alt="ItalianSBCImage">
+        <p style="text-align:center;">Italian</p>
+      </a>
+      <a href="#" onclick="SearchJapanese();" style="display: inline-block;">
+        <img class="searchCuisineImg" src="./assets/Japanese.jpg" alt="JapaneseSBCImage">
+        <p style="text-align:center;">Japanese</p>
+      </a>
+    </div>
   </div>
 
   <!-- Restaurant map -->
@@ -179,22 +183,109 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
       <input type="button" id="libertyWings" value="Add to cart" onclick="DisplayCart(); LibertyWingsAdd();">
       <input type="button" id="theLibertyGrillCart" value="Go to cart" style="display: none;" onclick="Cart();">
 
-      <!--template-->
-      <p><strong>Item name</strong> ($0)
-        <img class="menu_photo" src="">
+      <p>Crispy chicken wings tossed in your choice of buffalo, BBQ, or garlic parmesan sauce. Served with celery and
+        blue cheese dressing.</p>
+      <input type="button" id="libertyWings" value="Add to cart" onclick="LibertyWingsAdd();">
+      <input type="button" id="theLibertyGrillCart" value="Go to cart" style="display: none;" onclick="Cart();">
+
+      <p><strong>Fried Pickles</strong> ($6)
+        <img class="menu_photo" src=""> <!--add pic later-->
       </p>
-      <p>Description</p>
-      <input type="button" id="itemName" value="Add to cart" onclick="DisplayCart(); ItemNameAdd();"> <!--ItemName to actual item name-->
+      <p> Hand-battered pickles served with a tangy ranch dipping sauce.</p>
+      <input type="button" id="Fried Pickles" value="Add to cart" onclick="FriedPicklesAdd();">
+      <input type="button" id="theLibertyGrillCart" value="Go to cart" style="display: none;" onclick="Cart();">
+
+      <p><strong>Caprese Salad</strong> ($9)
+        <img class="menu_photo" src=""> <!--add pic later-->
+      </p>
+      <p> Fresh mozzarella, ripe tomatoes, and basil drizzled with balsamic glaze.</p>
+      <input type="button" id="CapreseSalad" value="Add to cart" onclick="CapreseSaladAdd();">
       <input type="button" id="theLibertyGrillCart" value="Go to cart" style="display: none;" onclick="Cart();">
 
       <h4>Main Courses</h4>
 
+      <p><strong>Liberty Burger</strong> ($19)
+        <img class="menu_photo" src=""> <!--add pic later-->
+      </p>
+      <p>Juicy beef patty topped with cheddar cheese, lettuce, tomato, onion, and our special Liberty sauce. Served with fries.</p>
+      <input type="button" id="LibertyBurger" value="Add to cart" onclick="LibertyBurgerAdd();">
+      <input type="button" id="theLibertyGrillCart" value="Go to cart" style="display: none;" onclick="Cart();">
+      
+      <p><strong>Grilled Chicken Sandwich</strong> ($16)
+        <img class="menu_photo" src=""> <!--add pic later-->
+      </p>
+      <p>Marinated grilled chicken breast with avocado, bacon, lettuce, tomato, and mayo on a toasted bun. Served with sweet potato fries.</p>
+      <input type="button" id="GrilledChickenSandwich" value="Add to cart" onclick="GrilledChickenSandwichAdd();">
+      <input type="button" id="theLibertyGrillCart" value="Go to cart" style="display: none;" onclick="Cart();">
+
+      <p><strong>BBQ Ribs</strong> ($25)
+        <img class="menu_photo" src=""> <!--add pic later-->
+      </p>
+      <p> Slow-cooked ribs smothered in our house BBQ sauce. Served with coleslaw and cornbread.</p>
+      <input type="button" id="BBQRibs" value="Add to cart" onclick="BBQRibs();">
+      <input type="button" id="theLibertyGrillCart" value="Go to cart" style="display: none;" onclick="Cart();">
+
       <h4>Sides</h4>
+
+      <p><strong>Mac & Cheese</strong> ($5)
+        <img class="menu_photo" src=""> <!--add pic later-->
+      </p>
+      <p>Creamy, cheesy goodness baked to perfection.</p>
+      <input type="button" id="MacCheese" value="Add to cart" onclick="MacCheeseAdd();">
+      <input type="button" id="theLibertyGrillCart" value="Go to cart" style="display: none;" onclick="Cart();">
+
+      <p><strong>Garlic Mashed Potatoes</strong> ($3)
+        <img class="menu_photo" src=""> <!--add pic later-->
+      </p>
+      <p>Smooth and buttery mashed potatoes with a hint of garlic.</p>
+      <input type="button" id="GarlicMashedPotatoes" value="Add to cart" onclick="GarlicMashedPotatoesAdd();">
+      <input type="button" id="theLibertyGrillCart" value="Go to cart" style="display: none;" onclick="Cart();">
+
+      <p><strong>Steamed Veggies</strong> ($2)
+        <img class="menu_photo" src=""> <!--add pic later-->
+      </p>
+      <p>A mix of seasonal vegetables lightly seasoned and steamed.</p>
+      <input type="button" id="SteamedVeggies" value="Add to cart" onclick="SteamedVeggiesAdd();">
+      <input type="button" id="theLibertyGrillCart" value="Go to cart" style="display: none;" onclick="Cart();">
 
       <h4>Desserts</h4>
 
-      <h4>Drinks</h4>
+      <p><strong>Apple Pie</strong> ($4)
+        <img class="menu_photo" src=""> <!--add pic later-->
+      </p>
+      <p>Classic apple pie served warm with a scoop of vanilla ice cream.</p>
+      <input type="button" id="ApplePie" value="Add to cart" onclick="ApplePieAdd();">
+      <input type="button" id="theLibertyGrillCart" value="Go to cart" style="display: none;" onclick="Cart();">
 
+      <p><strong>Chocolate Lava Cake</strong> ($6)
+        <img class="menu_photo" src=""> <!--add pic later-->
+      </p>
+      <p> Rich chocolate cake with a gooey molten center, served with whipped cream.</p>
+      <input type="button" id="ChocolateLavaCake" value="Add to cart" onclick="ChocolateLavaCakeAdd();">
+      <input type="button" id="theLibertyGrillCart" value="Go to cart" style="display: none;" onclick="Cart();">
+
+      <h4>Drinks</h4>
+      
+      <p><strong>Liberty Lemonade</strong> ($4)
+        <img class="menu_photo" src=""> <!--add pic later-->
+      </p>
+      <p>Freshly squeezed lemonade with a hint of mint.</p>
+      <input type="button" id="LibertyLemonade" value="Add to cart" onclick="LibertyLemonadeAdd();">
+      <input type="button" id="theLibertyGrillCart" value="Go to cart" style="display: none;" onclick="Cart();">
+
+      <p><strong>Iced Tea</strong> ($4)
+        <img class="menu_photo" src=""> <!--add pic later-->
+      </p>
+      <p>Classic sweet or unsweetened iced tea.</p>
+      <input type="button" id="IcedTea" value="Add to cart" onclick="IcedTeaAdd();">
+      <input type="button" id="theLibertyGrillCart" value="Go to cart" style="display: none;" onclick="Cart();">
+
+      <p><strong>Craft Beers</strong> ($6)
+        <img class="menu_photo" src=""> <!--add pic later-->
+      </p>
+      <p>A selection of local craft beers on tap.</p>
+      <input type="button" id="CraftBeers" value="Add to cart" onclick="CraftBeersAdd();">
+      <input type="button" id="theLibertyGrillCart" value="Go to cart" style="display: none;" onclick="Cart();">
     </form>
   </div>
   <br><br>
