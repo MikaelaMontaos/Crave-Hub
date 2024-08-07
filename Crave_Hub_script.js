@@ -11,6 +11,7 @@ function Cart() {
   if (libertyWingsCt != 0) {
     document.getElementById("emptyCart").style.display = "none";
     document.getElementById("cartTable").style.display = "block";
+    document.getElementById("cartTable").style.display = "table";
     document.getElementById("libertyWingsCart").style.display = "block";
     document.getElementById("libertyWingsCartCount").innerHTML = libertyWingsCt;
     document.getElementById("libertyWingsPrice").innerHTML = libertyWingsCt * 9;
