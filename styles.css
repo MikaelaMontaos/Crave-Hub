@@ -1,0 +1,102 @@
+#cart {
+    float: center;
+    height: auto;
+    padding: 0.25% 2%;
+    width: 50%;
+}
+
+#cartTable {
+    border-collapse: collapse;
+    table-layout: fixed !important;
+    width: 100%;
+
+    /* Debug */
+    border: 1;
+    border-style: solid;
+    border-color: black;
+}
+
+#cartTable thread tr {
+    width: 1000px !important;
+    position: fixed !important;
+}
+
+#cartTable tbody tr {
+    width: 1000px !important;
+}
+
+#cartTable td {
+    align-items: center;
+    text-align: center;
+    vertical-align: center;
+    width: 240px;
+}
+
+#cartTable td:nth-child(3) {
+    width: 250px;
+}
+
+.logo {
+    float: left;
+    font-size: 17px;
+    padding: 1%;
+}
+
+.menu {
+    display: block;
+    float: right;
+    font-size: 17px;
+    padding: 1%;
+    text-align: center;
+}
+
+#menu_bar {
+    background-color: #03c6dc;
+    height: auto;
+    overflow: auto;
+    width: auto;
+}
+
+.menu_photo {
+    float: left;
+    height: 100px;
+    padding: 1%;
+    width: auto;
+}
+
+.rating {
+    display: inline-block;
+}
+
+.restaurant_menu {
+    border: 1px;
+    border-style: solid;
+    float: right;
+    height: auto;
+    padding: 0.25% 2%;
+    width: 45%;
+}
+
+#search_zip,
+#restaurant_list {
+    border: 1px;
+    border-style: solid;
+    float: left;
+    height: auto;
+    padding: 0.25% 2%;
+    width: 45%;
+}
+
+#search_cuisine {
+    border: 1px;
+    border-style: solid;
+    float: right;
+    height: auto;
+    padding: 0.25% 2%;
+    width: 45%;
+}
+
+.searchCuisineImg {
+    width: auto;
+    height: 125px;
+}
