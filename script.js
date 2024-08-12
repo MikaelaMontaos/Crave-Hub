@@ -288,5 +288,5 @@ function CraftBeersAdd() {
 }
 
 function Checkout() {
-
+  alert("Under construction. Coming soon.");
 }
