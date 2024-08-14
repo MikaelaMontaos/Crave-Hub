@@ -120,11 +120,138 @@ function Cart() {
     document.getElementById("libertyWingsPrice").innerHTML = craftBeerCt * 6;
   }
 
+  // Buon Appetito cart
+  if (insalataCapreseCt != 0) {
+    document.getElementById("emptyCart").style.display = "none";
+    document.getElementById("cartTable").style.display = "block";
+    document.getElementById("cartTable").style.display = "table";
+    document.getElementById("capreseCart").style.display = "block";
+    document.getElementById("capreseCartCount").innerHTML = insalataCapreseCt;
+    document.getElementById("capresePrice").innerHTML = insalataCapreseCt * 7.95;
+  }
+  if (polpetteCt != 0) {
+    document.getElementById("emptyCart").style.display = "none";
+    document.getElementById("cartTable").style.display = "block";
+    document.getElementById("cartTable").style.display = "table";
+    document.getElementById("polpetteCart").style.display = "block";
+    document.getElementById("polpetteCartCount").innerHTML = polpetteCt;
+    document.getElementById("polpettePrice").innerHTML = polpetteCt * 8.5;
+  }
+  if (minestroneCt != 0) {
+    document.getElementById("emptyCart").style.display = "none";
+    document.getElementById("cartTable").style.display = "block";
+    document.getElementById("cartTable").style.display = "table";
+    document.getElementById("minestroneCart").style.display = "block";
+    document.getElementById("minestroneCartCount").innerHTML = minestroneCt;
+    document.getElementById("minestronePrice").innerHTML = minestroneCt * 5.95;
+  }
+  if (margheritaCt != 0) {
+    document.getElementById("emptyCart").style.display = "none";
+    document.getElementById("cartTable").style.display = "block";
+    document.getElementById("cartTable").style.display = "table";
+    document.getElementById("margheritaCart").style.display = "block";
+    document.getElementById("margheritaCartCount").innerHTML = margheritaCt;
+    document.getElementById("margheritaPrice").innerHTML = margheritaCt * 10.95;
+  }
+  if (porchettaCt != 0) {
+    document.getElementById("emptyCart").style.display = "none";
+    document.getElementById("cartTable").style.display = "block";
+    document.getElementById("cartTable").style.display = "table";
+    document.getElementById("porchettaCart").style.display = "block";
+    document.getElementById("porchettaCartCount").innerHTML = porchettaCt;
+    document.getElementById("porchettaPrice").innerHTML = porchettaCt * 11.95;
+  }
+  if (risottoCt != 0) {
+    document.getElementById("emptyCart").style.display = "none";
+    document.getElementById("cartTable").style.display = "block";
+    document.getElementById("cartTable").style.display = "table";
+    document.getElementById("risottoCart").style.display = "block";
+    document.getElementById("risottoCartCount").innerHTML = risottoCt;
+    document.getElementById("risottoPrice").innerHTML = risottoCt * 12.95;
+  }
+  if (insalataVerdeCt != 0) {
+    document.getElementById("emptyCart").style.display = "none";
+    document.getElementById("cartTable").style.display = "block";
+    document.getElementById("cartTable").style.display = "table";
+    document.getElementById("insalataVCart").style.display = "block";
+    document.getElementById("insalataVCartCount").innerHTML = insalataVerdeCt;
+    document.getElementById("insalataVPrice").innerHTML = insalataVerdeCt * 4.95;
+  }
+  if (patatineCt != 0) {
+    document.getElementById("emptyCart").style.display = "none";
+    document.getElementById("cartTable").style.display = "block";
+    document.getElementById("cartTable").style.display = "table";
+    document.getElementById("patatineCart").style.display = "block";
+    document.getElementById("patatineCartCount").innerHTML = patatineCt;
+    document.getElementById("patatinePrice").innerHTML = patatineCt * 3.95;
+  }
+  if (verdureCt != 0) {
+    document.getElementById("emptyCart").style.display = "none";
+    document.getElementById("cartTable").style.display = "block";
+    document.getElementById("cartTable").style.display = "table";
+    document.getElementById("verdureCart").style.display = "block";
+    document.getElementById("verdureCartCount").innerHTML = verdureCt;
+    document.getElementById("verdurePrice").innerHTML = verdureCt * 5.5;
+  }
+  if (tiramisuCt != 0) {
+    document.getElementById("emptyCart").style.display = "none";
+    document.getElementById("cartTable").style.display = "block";
+    document.getElementById("cartTable").style.display = "table";
+    document.getElementById("tiramisuCart").style.display = "block";
+    document.getElementById("tiramisuCartCount").innerHTML = tiramisuCt;
+    document.getElementById("tiramisuPrice").innerHTML = tiramisuCt * 6.95;
+  }
+  if (cannoliCt != 0) {
+    document.getElementById("emptyCart").style.display = "none";
+    document.getElementById("cartTable").style.display = "block";
+    document.getElementById("cartTable").style.display = "table";
+    document.getElementById("cannoliCart").style.display = "block";
+    document.getElementById("cannoliCartCount").innerHTML = cannoliCt;
+    document.getElementById("cannoliPrice").innerHTML = cannoliCt * 5.5;
+  }
+  if (gelatoCt != 0) {
+    document.getElementById("emptyCart").style.display = "none";
+    document.getElementById("cartTable").style.display = "block";
+    document.getElementById("cartTable").style.display = "table";
+    document.getElementById("gelatoCart").style.display = "block";
+    document.getElementById("gelatoCartCount").innerHTML = gelatoCt;
+    document.getElementById("gelatoPrice").innerHTML = gelatoCt * 4.95;
+  }
+  if (italianSodaCt != 0) {
+    document.getElementById("emptyCart").style.display = "none";
+    document.getElementById("cartTable").style.display = "block";
+    document.getElementById("cartTable").style.display = "table";
+    document.getElementById("italianSodaCart").style.display = "block";
+    document.getElementById("italianSodaCartCount").innerHTML = italianSodaCt;
+    document.getElementById("italianSodaPrice").innerHTML = italianSodaCt * 3.25;
+  }
+  if (houseWineCt != 0) {
+    document.getElementById("emptyCart").style.display = "none";
+    document.getElementById("cartTable").style.display = "block";
+    document.getElementById("cartTable").style.display = "table";
+    document.getElementById("wineCart").style.display = "block";
+    document.getElementById("wineCartCount").innerHTML = houseWineCt;
+    document.getElementById("winePrice").innerHTML = houseWineCt * 5.95;
+  }
+  if (beerCt != 0) {
+    document.getElementById("emptyCart").style.display = "none";
+    document.getElementById("cartTable").style.display = "block";
+    document.getElementById("cartTable").style.display = "table";
+    document.getElementById("beerCart").style.display = "block";
+    document.getElementById("beerCartCount").innerHTML = beerCt;
+    document.getElementById("beerPrice").innerHTML = beerCt * 4.5;
+  }
+
   // Hide other divs
   document.getElementById("search_zip").style.display = "none";
   document.getElementById("search_cuisine").style.display = "none";
   document.getElementById("liberty_menu").style.display = "none";
+  document.getElementById("buon_menu").style.display = "none";
   document.getElementById("restaurant_list").style.display = "none";
+}
+
+function Checkout() {
+  alert("Under construction. Coming soon.");
 }
 
 // Search functions
@@ -137,6 +264,8 @@ function SearchZip() {
     // Hide other divs
     document.getElementById("account").style.display = "none";
     document.getElementById("orders").style.display = "none";
+    document.getElementById("liberty_menu").style.display = "none";
+    document.getElementById("buon_menu").style.display = "none";
   }
   else {
     alert("Missing zip");
@@ -171,6 +300,14 @@ function SearchJapanese() {
 function Liberty() {
   event.preventDefault();
   document.getElementById("liberty_menu").style.display = "block";
+
+  // Hide other divs
+  document.getElementById("search_cuisine").style.display = "none";
+}
+
+function Buon() {
+  event.preventDefault();
+  document.getElementById("buon_menu").style.display = "block";
 
   // Hide other divs
   document.getElementById("search_cuisine").style.display = "none";
@@ -287,6 +424,114 @@ function CraftBeersAdd() {
     cartCt = cartCt + 1;
 }
 
-function Checkout() {
-  alert("Under construction. Coming soon.");
+// Buon Appetito Menu
+function DisplayCart() {
+  if (document.getElementById("buonCart").style.display != "block") {
+    document.getElementById("buonCart").style.display = "block";
+  }
+}
+let insalataCapreseCt = 0;
+function InsalataCapreseAdd() {
+  event.preventDefault();
+
+  insalataCapreseCt = insalataCapreseCt + 1;
+  cartCt = cartCt + 1;
+}
+let polpetteCt = 0;
+function PolpetteAlSugoAdd() {
+  event.preventDefault();
+
+  polpetteCt = polpetteCt + 1;
+  cartCt = cartCt + 1;
+}
+let minestroneCt = 0;
+function MinestroneSoupAdd() {
+  event.preventDefault();
+
+  minestroneCt = minestroneCt + 1;
+  cartCt = cartCt + 1;
+}
+let margheritaCt = 0;
+function MargheritaPizzaAdd() {
+  event.preventDefault();
+
+  margheritaCt = margheritaCt + 1;
+  cartCt = cartCt + 1;
+}
+let porchettaCt = 0;
+function PorchettaPaninoAdd() {
+  event.preventDefault();
+
+  porchettaCt = porchettaCt + 1;
+  cartCt = cartCt + 1;
+}
+let risottoCt = 0;
+function RisottoPrimaveraAdd() {
+  event.preventDefault();
+
+  risottoCt = risottoCt + 1;
+  cartCt = cartCt + 1;
+}
+let insalataVerdeCt = 0;
+function InsalataVerdeAdd() {
+  event.preventDefault();
+
+  insalataVerdeCt = insalataVerdeCt + 1;
+  cartCt = cartCt + 1;
+}
+let patatineCt = 0;
+function PatatineFritteAdd() {
+  event.preventDefault();
+
+  patatineCt = patatineCt + 1;
+  cartCt = cartCt + 1;
+}
+let verdureCt = 0;
+function VerdureGrigliateAdd() {
+  event.preventDefault();
+
+  verdureCt = verdureCt + 1;
+  cartCt = cartCt + 1;
+}
+let tiramisuCt = 0;
+function TiramisuAdd() {
+  event.preventDefault();
+
+  tiramisuCt = tiramisuCt + 1;
+  cartCt = cartCt + 1;
+}
+let cannoliCt = 0;
+function CannoliSicilianiAdd() {
+  event.preventDefault();
+
+  cannoliCt = cannoliCt + 1;
+  cartCt = cartCt + 1;
+}
+let gelatoCt = 0;
+function GelatoAdd() {
+  event.preventDefault();
+
+  gelatoCt = gelatoCt + 1;
+  cartCt = cartCt + 1;
+}
+let italianSodaCt = 0;
+function ItalianSodasAdd() {
+  event.preventDefault();
+
+  italianSodaCt = italianSodaCt + 1;
+  cartCt = cartCt + 1;
+}
+let houseWineCt = 0;
+function HouseWineAdd() {
+  event.preventDefault();
+
+  houseWineCt = houseWineCt + 1;
+  cartCt = cartCt + 1;
+}
+let beerCt = 0;
+function BeerAdd() {
+  event.preventDefault();
+
+  beerCt = beerCt + 1;
+  cartCt = cartCt + 1;
 }

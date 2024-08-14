@@ -60,6 +60,7 @@
 .menu_photo {
     float: left;
     height: 100px;
+    padding-right: 1%;
     width: auto;
 }
 

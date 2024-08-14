@@ -29,7 +29,7 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
     </div>
   </div>
 
-  <!-- Cart add images-->
+  <!-- Cart -->
   <div id="cart" style="display:none;">
     <h2>Cart</h2>
     <h3 id="emptyCart">No items in cart</h3>
@@ -39,81 +39,160 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
         <th>Quantity</th>
         <th>Price</th>
       </tr>
+      <!-- The Liberty Grill cart
+      -->
       <tr id="libertyWingsCart" style="display:none;">
-        <td><img class="menu_photo" src="./assets/Liberty Wings.jpg"><br>Liberty wings</td>
+        <td><img class="menu_photo" src="./assets/Liberty Wings.jpg" alt="Liberty Wings"><br>Liberty wings</td>
         <td><span id="libertyWingsCartCount">0</span></td>
         <td>$<span id="libertyWingsPrice">0</span></td>
       </tr>
       <tr id="friedPicklesCart" style="display:none;">
-        <td><img class="menu_photo" src=""><br>Fried pickles</td>
+        <td><img class="menu_photo" src="./assets/Fried Pickles.jpg" alt="Fried Pickles"><br>Fried pickles</td>
         <td><span id="friedPicklesCartCount">0</span></td>
         <td>$<span id="friedPicklesPrice">0</span></td>
       </tr>
       <tr id="capreseSaladCart" style="display:none;">
-        <td><img class="menu_photo" src=""><br>Caprese salad</td>
+        <td><img class="menu_photo" src="./assets/Caprese Salad.jpg" alt="Caprese Salad"><br>Caprese salad</td>
         <td><span id="capreseSaladCartCount">0</span></td>
         <td>$<span id="capreseSaladPrice">0</span></td>
       </tr>
       <tr id="libertyBurgerCart" style="display:none;">
-        <td><img class="menu_photo" src=""><br>Liberty burger</td>
+        <td><img class="menu_photo" src="./assets/Liberty Burger.jpg" alt="Liberty Burger"><br>Liberty burger</td>
         <td><span id="libertyBurgerCartCount">0</span></td>
         <td>$<span id="libertyBurgerPrice">0</span></td>
       </tr>
       <tr id="grilledChickenSandoCart" style="display:none;">
-        <td><img class="menu_photo" src=""><br>Grilled chicken sandwich</td>
+        <td><img class="menu_photo" src="./assets/Grilled Chicken Sandwich.jpg" alt="Grilled Chicken Sandwich"><br>Grilled chicken sandwich</td>
         <td><span id="grilledChickenSandoCartCount">0</span></td>
-        <td>$<span id="libertyBurgerPrice">0</span></td>
+        <td>$<span id="grilledChickenSandoPrice">0</span></td>
       </tr>
       <tr id="bbqRibsCart" style="display:none;">
-        <td><img class="menu_photo" src=""><br>BBQ ribs</td>
+        <td><img class="menu_photo" src="./assets/BBQ Ribs.jpg" alt="BBQ Ribs"><br>BBQ ribs</td>
         <td><span id="bbqRibsCartCount">0</span></td>
         <td>$<span id="bbqRibsPrice">0</span></td>
       </tr>
       <tr id="macCheeseCart" style="display:none;">
-        <td><img class="menu_photo" src=""><br>Mac & cheese</td>
+        <td><img class="menu_photo" src="./assets/Mac&Cheese.jpg" alt="Mac & Cheese"><br>Mac & cheese</td>
         <td><span id="macCheeseCartCount">0</span></td>
         <td>$<span id="macCheesePrice">0</span></td>
       </tr>
       <tr id="garlicMPCCart" style="display:none;">
-        <td><img class="menu_photo" src=""><br>Garlic mashed potatoes</td>
+        <td><img class="menu_photo" src="./assets/Garlic Mashed Potatoes.jpg" alt="Garlic Mashed Potatoes"><br>Garlic mashed potatoes</td>
         <td><span id="garlicMPCCartCount">0</span></td>
         <td>$<span id="garlicMPCPrice">0</span></td>
       </tr>
       <tr id="steamedVegCart" style="display:none;">
-        <td><img class="menu_photo" src=""><br>Steamed veggies</td>
+        <td><img class="menu_photo" src="./assets/Steamed Veggies.jpg" alt="Steamed Veggies"><br>Steamed veggies</td>
         <td><span id="steamedVegCartCount">0</span></td>
         <td>$<span id="steamedVegPrice">0</span></td>
       </tr>
       <tr id="applePieCart" style="display:none;">
-        <td><img class="menu_photo" src=""><br>Apple pie</td>
+        <td><img class="menu_photo" src="./assets/ApplePie.jpg" alt="Apple Pie"><br>Apple pie</td>
         <td><span id="applePieCartCount">0</span></td>
         <td>$<span id="applePiePrice">0</span></td>
       </tr>
       <tr id="chocoLavaCakeCart" style="display:none;">
-        <td><img class="menu_photo" src=""><br>Chocolate lava cake</td>
+        <td><img class="menu_photo" src="./assets/ChocolateLavaCake.jpg" alt="Chocolate Lava Cake"><br>Chocolate lava cake</td>
         <td><span id="chocoLavaCakeCartCount">0</span></td>
         <td>$<span id="chocoLavaCakePrice">0</span></td>
       </tr>
       <tr id="libertyLemonadeCart" style="display:none;">
-        <td><img class="menu_photo" src=""><br>Liberty lemonade</td>
+        <td><img class="menu_photo" src="./assets/LibertyLemonade.jpg" alt="Liberty Lemonade"><br>Liberty lemonade</td>
         <td><span id="libertyLemonadeCartCount">0</span></td>
         <td>$<span id="libertyLemonadePrice">0</span></td>
       </tr>
       <tr id="icedTeaCart" style="display:none;">
-        <td><img class="menu_photo" src=""><br>Iced tea</td>
+        <td><img class="menu_photo" src="./assets/IcedTea.jpg" alt="Iced Tea"><br>Iced tea</td>
         <td><span id="icedTeaCartCount">0</span></td>
         <td>$<span id="icedTeaPrice">0</span></td>
       </tr>
       <tr id="craftBeerCart" style="display:none;">
-        <td><img class="menu_photo" src=""><br>Craft beers</td>
+        <td><img class="menu_photo" src="./assets/CraftBeer.jpg" alt="Craft Beer"><br>Craft beers</td>
         <td><span id="craftBeerCartCount">0</span></td>
         <td>$<span id="craftBeerPrice">0</span></td>
+      </tr>
+      <!-- Buon Appetito cart
+      -->
+      <tr id="capreseCart" style="display:none;">
+        <td><img class="menu_photo" src="./assets/InsalataCaprese.jpg" alt="Insalata Caprese"><br>Insalata Caprese</td>
+        <td><span id="capreseCartCount">0</span></td>
+        <td>$<span id="capresePrice">0</span></td>
+      </tr>
+      <tr id="polpetteCart" style="display:none;">
+        <td><img class="menu_photo" src="./assets/PolpetteAlSugo.jpeg" alt="Polpette Al Sugo"><br>Polpette Al Sugo</td>
+        <td><span id="polpetteCartCount">0</span></td>
+        <td>$<span id="polpettePrice">0</span></td>
+      </tr>
+      <tr id="minestroneCart" style="display:none;">
+        <td><img class="menu_photo" src="./assets/MinestroneSoup.jpg" alt="Minestrone Soup"><br>Minestrone Soup</td>
+        <td><span id="minestroneCartCount">0</span></td>
+        <td>$<span id="minestronePrice">0</span></td>
+      </tr>
+      <tr id="margheritaCart" style="display:none;">
+        <td><img class="menu_photo" src="./assets/PizzaMargherita.jpg" alt="Margherita Pizza"><br>Margherita Pizza</td>
+        <td><span id="margheritaCartCount">0</span></td>
+        <td>$<span id="margheritaPrice">0</span></td>
+      </tr>
+      <tr id="porchettaCart" style="display:none;">
+        <td><img class="menu_photo" src="./assets/PorchettaPanino.jpg" alt="Porchetta Panino"><br>Porchetta Panino</td>
+        <td><span id="porchettaCartCount">0</span></td>
+        <td>$<span id="porchettaPrice">0</span></td>
+      </tr>
+      <tr id="risottoCart" style="display:none;">
+        <td><img class="menu_photo" src="./assets/RisottoPrimaevra.jpg" alt="Risotto Primavera"><br>Risotto Primavera</td>
+        <td><span id="risottoCartCount">0</span></td>
+        <td>$<span id="risottoPrice">0</span></td>
+      </tr>
+      <tr id="insalataVCart" style="display:none;">
+        <td><img class="menu_photo" src="./assets/InsalataVerde.jpg" alt="Insalata Verde"><br>Insalata Verde</td>
+        <td><span id="insalataVCartCount">0</span></td>
+        <td>$<span id="insalataVPrice">0</span></td>
+      </tr>
+      <tr id="patatineCart" style="display:none;">
+        <td><img class="menu_photo" src="./assets/PatatineFritte.jpg" alt="Patatine Fritte"><br>Patatine Fritte</td>
+        <td><span id="patatineCartCount">0</span></td>
+        <td>$<span id="patatinePrice">0</span></td>
+      </tr>
+      <tr id="verdureCart" style="display:none;">
+        <td><img class="menu_photo" src="./assets/VerdureGrigliate.jpg" alt="Verdure Grigliate"><br>Verdure Grigliate</td>
+        <td><span id="verdureCartCount">0</span></td>
+        <td>$<span id="verdurePrice">0</span></td>
+      </tr>
+      <tr id="tiramisuCart" style="display:none;">
+        <td><img class="menu_photo" src="./assets/Tiramisu.jpg" alt="Tiramisù"><br>Tiramisù</td>
+        <td><span id="tiramisuCartCount">0</span></td>
+        <td>$<span id="tiramisuPrice">0</span></td>
+      </tr>
+      <tr id="cannoliCart" style="display:none;">
+        <td><img class="menu_photo" src="./assets/CannoliSiciliani.jpg" alt="Cannoli Siciliani"><br>Cannoli Siciliani</td>
+        <td><span id="cannoliCartCount">0</span></td>
+        <td>$<span id="cannoliPrice">0</span></td>
+      </tr>
+      <tr id="gelatoCart" style="display:none;">
+        <td><img class="menu_photo" src="./assets/Gelato.jpg" alt="Gelato"><br>Gelato</td>
+        <td><span id="gelatoCartCount">0</span></td>
+        <td>$<span id="gelatoPrice">0</span></td>
+      </tr>
+      <tr id="italianSodaCart" style="display:none;">
+        <td><img class="menu_photo" src="./assets/ItalianSoda.jpg" alt="Italian Sodas"><br>Italian Sodas</td>
+        <td><span id="italianSodaCartCount">0</span></td>
+        <td>$<span id="italianSodaPrice">0</span></td>
+      </tr>
+      <tr id="wineCart" style="display:none;">
+        <td><img class="menu_photo" src="./assets/HouseWine.jpg" alt="House Wine"><br>House Wine (glass)</td>
+        <td><span id="wineCartCount">0</span></td>
+        <td>$<span id="winePrice">0</span></td>
+      </tr>
+      <tr id="beerCart" style="display:none;">
+        <td><img class="menu_photo" src="./assets/Beer.jpg" alt="Beer"><br>Beer</td>
+        <td><span id="beerCartCount">0</span></td>
+        <td>$<span id="beerPrice">0</span></td>
       </tr>
     </table>
     <br>
     <input type="button" value="Checkout" onclick="Checkout();" style="float:right;">
   </div>
-  
+
 
   <!-- Search by zip code -->
   <div id="search_zip">
@@ -143,11 +222,6 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
         <p style="text-align:center;">Japanese</p>
       </a>
     </div>
-  </div>
-
-  <!-- Restaurant map -->
-  <div id="map"> <!--style="display:none;"-->
-
   </div>
 
   <!-- Restaurant menu-->
@@ -182,17 +256,20 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
       <p><strong>Liberty Burger</strong> ($19)
         <img class="menu_photo" src="./assets/Liberty Burger.jpg" alt="Liberty Burger">
       </p>
-      <p>Juicy beef patty topped with cheddar cheese, lettuce, tomato, onion, and our special Liberty sauce. Served with fries.</p>
+      <p>Juicy beef patty topped with cheddar cheese, lettuce, tomato, onion, and our special Liberty sauce. Served with
+        fries.</p>
       <input type="button" id="LibertyBurger" value="Add to cart" onclick="DisplayCart(); LibertyBurgerAdd();">
-      
+
       <p><strong>Grilled Chicken Sandwich</strong> ($16)
         <img class="menu_photo" src="./assets/Grilled Chicken Sandwich.jpg" alt="Grilled Chicken Sandwich">
       </p>
-      <p>Marinated grilled chicken breast with avocado, bacon, lettuce, tomato, and mayo on a toasted bun. Served with sweet potato fries.</p>
-      <input type="button" id="GrilledChickenSandwich" value="Add to cart" onclick="DisplayCart(); GrilledChickenSandwichAdd();">
+      <p>Marinated grilled chicken breast with avocado, bacon, lettuce, tomato, and mayo on a toasted bun. Served with
+        sweet potato fries.</p>
+      <input type="button" id="GrilledChickenSandwich" value="Add to cart"
+        onclick="DisplayCart(); GrilledChickenSandwichAdd();">
 
       <p><strong>BBQ Ribs</strong> ($25)
-        <img class="menu_photo" src="./assets/BBQ Ribs.jpg" alt="BBQ Ribs"> 
+        <img class="menu_photo" src="./assets/BBQ Ribs.jpg" alt="BBQ Ribs">
       </p>
       <p>Slow-cooked ribs smothered in our house BBQ sauce. Served with coleslaw and cornbread.</p>
       <input type="button" id="BBQRibs" value="Add to cart" onclick="DisplayCart(); BBQRibsAdd();">
@@ -200,7 +277,7 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
       <h3>Sides</h3>
 
       <p><strong>Mac & Cheese</strong> ($5)
-        <img class="menu_photo" src="./assets/Mac Cheese.jpg" alt="Mac & Cheese">
+        <img class="menu_photo" src="./assets/Mac&Cheese.jpg" alt="Mac & Cheese">
       </p>
       <p>Creamy, cheesy goodness baked to perfection.</p>
       <input type="button" id="MacCheese" value="Add to cart" onclick="DisplayCart(); MacCheeseAdd();">
@@ -209,7 +286,8 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
         <img class="menu_photo" src="./assets/Garlic Mashed Potatoes.jpg" alt="Garlic Mashed Potatoes">
       </p>
       <p>Smooth and buttery mashed potatoes with a hint of garlic.</p>
-      <input type="button" id="GarlicMashedPotatoes" value="Add to cart" onclick="DisplayCart(); GarlicMashedPotatoesAdd();">
+      <input type="button" id="GarlicMashedPotatoes" value="Add to cart"
+        onclick="DisplayCart(); GarlicMashedPotatoesAdd();">
 
       <p><strong>Steamed Veggies</strong> ($2)
         <img class="menu_photo" src="./assets/Steamed Veggies.jpg" alt="Steamed Veggies">
@@ -220,40 +298,148 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
       <h3>Desserts</h3>
 
       <p><strong>Apple Pie</strong> ($4)
-        <img class="menu_photo" src="" alt="Apple Pie"> <!--add pic later-->
+        <img class="menu_photo" src="./assets/ApplePie.jpg" alt="Apple Pie">
       </p>
       <p>Classic apple pie served warm with a scoop of vanilla ice cream.</p>
       <input type="button" id="ApplePie" value="Add to cart" onclick="DisplayCart(); ApplePieAdd();">
 
       <p><strong>Chocolate Lava Cake</strong> ($6)
-        <img class="menu_photo" src="" alt="Chocolate Lava Cake"> <!--add pic later-->
+        <img class="menu_photo" src="./assets/ChocolateLavaCake.jpg" alt="Chocolate Lava Cake">
       </p>
       <p>Rich chocolate cake with a gooey molten center, served with whipped cream.</p>
       <input type="button" id="ChocolateLavaCake" value="Add to cart" onclick="DisplayCart(); ChocolateLavaCakeAdd();">
 
       <h3>Drinks</h3>
-      
+
       <p><strong>Liberty Lemonade</strong> ($4)
-        <img class="menu_photo" src="" alt="Liberty Lemonade"> <!--add pic later-->
+        <img class="menu_photo" src="./assets/LibertyLemonade.jpg" alt="Liberty Lemonade">
       </p>
       <p>Freshly squeezed lemonade with a hint of mint.</p>
       <input type="button" id="LibertyLemonade" value="Add to cart" onclick="DisplayCart(); LibertyLemonadeAdd();">
 
       <p><strong>Iced Tea</strong> ($4)
-        <img class="menu_photo" src="" alt="Iced Tea"> <!--add pic later-->
+        <img class="menu_photo" src="./assets/IcedTea.jpg" alt="Iced Tea">
       </p>
       <p>Classic sweet or unsweetened iced tea.</p>
       <input type="button" id="IcedTea" value="Add to cart" onclick="DisplayCart(); IcedTeaAdd();">
 
       <p><strong>Craft Beers</strong> ($6)
-        <img class="menu_photo" src="" alt="Craft Beers"> <!--add pic later-->
+        <img class="menu_photo" src="./assets/CraftBeer.jpg" alt="Craft Beers">
       </p>
       <p>A selection of local craft beers on tap.</p>
       <input type="button" id="CraftBeers" value="Add to cart" onclick="DisplayCart(); CraftBeersAdd();">
     </form>
   </div>
-  <br><br>
 
+  <!-- Restaurant menu-->
+  <div id="buon_menu" class="restaurant_menu" style="display:none;">
+    <h2>Buon Appetito</h2>
+    <input type="button" id="buonCart" value="Go to cart" style="display: none;" onclick="Cart();">
+
+    <form>
+      <h3>Appetizers</h3>
+
+      <p><strong>Insalata Caprese</strong> ($8.50)
+        <img class="menu_photo" src="./assets/InsalataCaprese.jpg" alt="Insalata Caprese">
+      </p>
+      <p>Fresh mozzarella, tomatoes, basil, and balsamic glaze.</p>
+      <input type="button" id="InsalataCaprese" value="Add to cart" onclick="DisplayCart(); InsalataCapreseAdd();">
+
+      <p><strong>Polpette Al Sugo</strong> ($7.45)
+        <img class="menu_photo" src="./assets/PolpetteAlSugo.jpeg" alt="Polpette Al Sugo">
+      </p>
+      <p>Homemade meatballs in marinara sauce.</p>
+      <input type="button" id="PolpetteAlSugo" value="Add to cart" onclick="DisplayCart(); PolpetteAlSugoAdd();">
+
+      <p><strong>Minestrone Soup</strong> ($5.75)
+        <img class="menu_photo" src="./assets/MinestroneSoup.jpg" alt="Minestrone Soup">
+      </p>
+      <p>Classic Italian vegetable soup.</p>
+      <input type="button" id="MinestroneSoup" value="Add to cart" onclick="DisplayCart(); MinestroneSoupAdd();">
+
+      <h3>Main Courses</h3>
+
+      <p><strong>Margherita Pizza</strong> ($10.95)
+        <img class="menu_photo" src="./assets/PizzaMargherita.jpg" alt="Margherita Pizza">
+      </p>
+      <p>Tomato sauce, mozzarella, and fresh basil.</p>
+      <input type="button" id="MargheritaPizza" value="Add to cart" onclick="DisplayCart(); MargheritaPizzaAdd();">
+
+      <p><strong>Porchetta Panino</strong> ($12.95)
+        <img class="menu_photo" src="./assets/PorchettaPanino.jpg" alt="Porchetta Panino">
+      </p>
+      <p>Italian-style roasted pork sandwich with arugula and aioli, served with fries.</p>
+      <input type="button" id="PorchettaPanino" value="Add to cart" onclick="DisplayCart(); PorchettaPaninoAdd();">
+
+      <p><strong>Risotto Primavera</strong> ($11.85)
+        <img class="menu_photo" src="./assets/RisottoPrimaevra.jpg" alt="Risotto Primavera">
+      </p>
+      <p>Creamy risotto with seasonal vegetables.</p>
+      <input type="button" id="RisottoPrimavera" value="Add to cart" onclick="DisplayCart(); RisottoPrimaveraAdd();">
+
+      <h3>Sides</h3>
+
+      <p><strong>Insalata Verde</strong> ($4.75)
+        <img class="menu_photo" src="./assets/InsalataVerde.jpg" alt="Insalata Verde">
+      </p>
+      <p>Mixed green salad with house dressing.</p>
+      <input type="button" id="InsalataVerde" value="Add to cart" onclick="DisplayCart(); InsalataVerdeAdd();">
+
+      <p><strong>Patatine Fritte</strong> ($3.95)
+        <img class="menu_photo" src="./assets/PatatineFritte.jpg" alt="Patatine Fritte">
+      </p>
+      <p>French fries with garlic aioli.</p>
+      <input type="button" id="PatatineFritte" value="Add to cart" onclick="DisplayCart(); PatatineFritteAdd();">
+
+      <p><strong>Verdure Grigliate</strong> ($5.50)
+        <img class="menu_photo" src="./assets/VerdureGrigliate.jpg" alt="Verdure Grigliate">
+      </p>
+      <p>Grilled seasonal vegetables.</p>
+      <input type="button" id="VerdureGrigliate" value="Add to cart" onclick="DisplayCart(); VerdureGrigliateAdd();">
+
+      <h3>Desserts</h3>
+
+      <p><strong>Tiramisù</strong> ($6.95)
+        <img class="menu_photo" src="./assets/Tiramisu.jpg" alt="Tiramisù">
+      </p>
+      <p>Classic Italian dessert with coffee and mascarpone.</p>
+      <input type="button" id="Tiramisu" value="Add to cart" onclick="DisplayCart(); TiramisuAdd();">
+
+
+      <p><strong>Cannoli Siciliani</strong> ($6.95)
+        <img class="menu_photo" src="./assets/CannoliSiciliani.jpg" alt="Cannoli Siciliani">
+      </p>
+      <p>Crispy pastry tubes filled with sweet ricotta cheese and chocolate chips.</p>
+      <input type="button" id="CannoliSiciliani" value="Add to cart" onclick="DisplayCart(); CannoliSicilianiAdd();">
+
+      <p><strong>Gelato</strong> ($4.95)
+        <img class="menu_photo" src="./assets/Gelato.jpg" alt="Gelato">
+      </p>
+      <p>Choice of vanilla, chocolate, or strawberry.</p>
+      <input type="button" id="Gelato" value="Add to cart" onclick="DisplayCart(); GelatoAdd();">
+
+      <h3>Drinks</h3>
+
+      <p><strong>Italian Sodas</strong> ($3.25)
+        <img class="menu_photo" src="./assets/ItalianSoda.jpg" alt="Italian Sodas">
+      </p>
+      <p>Choice of vanilla cream, mango, or strawberry.</p>
+      <input type="button" id="ItalianSodas" value="Add to cart" onclick="DisplayCart(); ItalianSodasAdd();">
+
+      <p><strong>House Wine</strong> ($5.95)
+        <img class="menu_photo" src="./assets/HouseWine.jpg" alt="House Wine">
+      </p>
+      <p>One glass for the Wine of the day. </p>
+      <input type="button" id="HouseWine" value="Add to cart" onclick="DisplayCart(); HouseWineAdd();">
+
+      <p><strong>Beer</strong> ($5.95)
+        <img class="menu_photo" src="./assets/Beer.jpg">
+      </p>
+      <p> Choice of Carona, Peroni, or Dos Equis </p>
+      <input type="button" id="Beer" value="Add to cart" onclick="DisplayCart(); BeerAdd();">
+    </form>
+  </div>
+  <br><br>
 
   <!-- Restaurant list -->
   <div id="restaurant_list" style="display:none;">
@@ -276,37 +462,50 @@ The user can search for restaurants by zip code and/or cuisine, order food for p
       </div>
     </div>
     <div id="italian" class="cuisine" style="display:none;">
-      <div id="italian1" class="restaurant">
-        <h4>Coming soon</h4>
+      <div id="italian1" class="restaurant" style="text-align:center;">
+        <a href="#" onclick="Buon();">
+          <img src="./assets/BuonAppetito.jpg" alt="Buon Appetito" width="auto" height="300px"><br> <!--image-->
+          <h3 style="display: inline-block;">Buon Appetito</h3>
+        </a>
+        <img src="./assets/Star Filled.png" alt="Star" class="rating" style="width:auto; height:100%; max-height:20px;">
+        <img src="./assets/Star Filled.png" alt="Star" class="rating" style="width:auto; height:100%; max-height:20px;">
+        <img src="./assets/Star Filled.png" alt="Star" class="rating" style="width:auto; height:100%; max-height:20px;">
+        <img src="./assets/Star Filled.png" alt="Star" class="rating" style="width:auto; height:100%; max-height:20px;">
+        <img src="./assets/Star Filled.png" alt="Star" class="rating" style="width:auto; height:100%; max-height:20px;"
+          style="width:auto; height:100%; max-height:20px;">
+        <p class="rating">5</p>
+        <p>Italian<br>
+          11:00 AM - 2:00 PM<br>
+          5:00 PM - 9:00 PM</p>
       </div>
 
+    </div>
+    <div id="japanese" class="cuisine" style="display:none;">
+      <div id="japanese1" class="restaurant">
+        <h3>Japanese restaurants coming soon</h3>
       </div>
-      <div id="japanese" class="cuisine" style="display:none;">
-        <div id="japanese1" class="restaurant">
-          <h4>Coming soon</h4>
-        </div>
-      </div>
     </div>
+  </div>
 
-    <!--Payment-->
-    <div id="payment" style="display:none;">
-      <h3>Payment</h3>
+  <!--Payment-->
+  <div id="payment" style="display:none;">
+    <h3>Payment</h3>
 
-    </div>
+  </div>
 
-    <!--Account page-->
-    <div id="account" style="display:none;">
-      <h3>Account</h3>
+  <!--Account page-->
+  <div id="account" style="display:none;">
+    <h3>Account</h3>
 
-    </div>
+  </div>
 
-    <!--Orders page-->
-    <div id="orders" style="display:none;">
-      <h3>Orders</h3>
+  <!--Orders page-->
+  <div id="orders" style="display:none;">
+    <h3>Orders</h3>
 
-    </div>
+  </div>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 
 </html>
